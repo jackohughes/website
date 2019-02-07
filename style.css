@@ -75,6 +75,10 @@ ul{
 li{
   margin: 10px 0;
 }
+img.center {
+    display: block;
+    margin: 0 auto;
+}
 
 .hidden_source{
     display:none
