@@ -72,6 +72,10 @@ ul{
     padding-left:0px;
     list-style-type:none
 }
+li{
+  margin: 10px 0;
+}
+
 .hidden_source{
     display:none
 }
