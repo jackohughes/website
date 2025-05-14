@@ -1,106 +1,102 @@
-body{
-    color:black;
-    font-family: Times New Roman, Arial, serif;
-    font-size:14px;
-    margin:0px auto 0px auto;
-    padding-left:5px;
-    padding-right:5px;
-    max-width:600px;
-    background-color:#fdf6e3
-}
-math{
-    font-size:13px
+@import url("https://use.typekit.net/wyj2oil.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-div#header{
-    margin-bottom:30px;
-    padding:12px 0px 12px 0px
-}
-div#logo a{
-    color:black;
-    float:left;
-    font-size:20px;
-    text-decoration:none
-}
-div#header #navigation{
-    text-align:right
-}
-div#header #navigation a{
-    color:black;
-    font-family:Times New Roman,Arial,Serif;
-    font-size:18px;
-    margin-left:10px;
-    text-decoration:none;
-    text-transform:uppercase
-}
-div#footer{
-    font-family:Times New Roman,Arial,Serif;
-    border-top:solid 2px black;
-    color:#555;
-    font-size:12px;
-    margin-top:30px;
-    padding:12px 0px 12px 0px;
-    text-align:right
-}
-h1{
-    font-family:Times New Roman,Arial,Serif;
-    font-size:22px;
-    font-weight:normal
-}
-h2{
-    font-family:Times New Roman,Arial,Serif;
-    font-size:20px;
-    font-weight:normal
-}
-div.info{
-    color:#555;
-    font-size:15px;
-    font-style:italic
-}
-span.quiet{
-    color:#828282;
-    font-style:italic
-}
-a{
-    color:black;
-    word-wrap:break-word
-}
-ul{
-    margin-left:0px;
-    padding-left:0px;
-    list-style-type:none
-}
-li{
-  margin: 10px 0;
-}
-img {
-    display: block;
-    margin: 0 auto;
+html {
+    font-size: 24px;
 }
 
-.hidden_source{
-    display:none
+.wf-loading {
+  visibility: hidden;
 }
-ol.serieslist{
-    counter-reset:item;
-    list-style-type:none;
-    padding-left:20
+
+body,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "nimbus-sans", sans-serif;
+  font-weight: 420;
+  font-size: 1rem;
 }
-ol li.serieslist:before{
-    content:'Part ' counter(item,decimal) ':';
-    counter-increment:item
+
+body {
+  color: black;
+  background: rgb(243, 244, 235);
+  line-height: 1.2;
 }
-table.sourceCode,tr.sourceCode,td.lineNumbers,td.sourceCode,table.sourceCode pre{
-    margin:0;
-    padding:0;
-    border:0;
-    vertical-align:baseline;
-    border:none
+
+p {
+  max-width: 33rem;
+  margin-bottom: 1rem;
 }
-td.lineNumbers{
-    border-right:1px solid #AAAAAA;
-    text-align:right;
-    color:#AAAAAA;
-    padding-right:5px;
-    padding-left:5px
+
+em{
+  font-style: normal;
+}
+
+.container {
+  background: white;
+  padding: 1rem;
+  height: 100vh;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1.5px solid black;
+  transition: color 400ms ease-in-out, border-color 400ms linear;
+  &:hover {
+    cursor: pointer;
+    color: rgb(6, 174, 213);
+    border-color: rgb(6, 174, 213);
+  }
+}
+
+#footer {
+    background-color: white;
+}
+
+/*CURSOR---------------------*/
+#bg {
+  position: absolute;
+  min-height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#cursor {
+  width: 300px;
+  height: 300px;
+  filter: blur(100px);
+  position: absolute;
+  border-radius: 30%;
+  z-index: 40;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.gradient {
+  background: linear-gradient(to bottom right, rgb(121, 64, 83) 30%, rgb(202, 165, 191) 60%, rgba(98, 206, 154, 0.23) 80%) no-repeat;
+}
+
+::selection {
+  background: black;
+  color: white;
+}
+
+::-moz-selection {
+  background: black;
+  color: white;
+}
+
+@media screen and (max-width: 680px) {
+  #cursor {
+    display: none;
+  }
 }
