@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     // CURSOR OVERLAY
       function setBounds(){
-        $('#bg').width($('body').width()).height($('body').height());
+        $('#bg').width($('body').width()).height($(document).height());
       } //prevent scrolling via cursor
     
       window.setTimeout(setBounds, 500);

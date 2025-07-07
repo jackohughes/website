@@ -59,19 +59,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Publications</title>
+        <!-- Basic Meta Tags -->
+        <title>Publications - Jack Hughes | Programming Language Research Papers</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Academic publications by Jack Hughes on programming language theory, type systems, program synthesis, and linear/graded types. Includes papers from ECOOP, ESOP, LOPSTR and workshops.">
+        <meta name="keywords" content="Jack Hughes publications, programming language papers, type systems research, program synthesis, linear types, graded types, ECOOP, ESOP, LOPSTR, University of Kent">
+        <meta name="author" content="Jack Hughes">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://jackohughes.com/publications.html">
+        <meta property="og:title" content="Publications - Jack Hughes | Programming Language Research">
+        <meta property="og:description" content="Academic publications on programming language theory, type systems, program synthesis, and linear/graded types by Jack Hughes.">
+        <meta property="og:site_name" content="Jack Hughes">
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary">
+        <meta property="twitter:url" content="https://jackohughes.com/publications.html">
+        <meta property="twitter:title" content="Publications - Jack Hughes | Programming Language Research">
+        <meta property="twitter:description" content="Academic publications on programming language theory, type systems, program synthesis, and linear/graded types.">
+        
+        <!-- Additional Meta -->
+        <meta name="theme-color" content="#f3f4eb">
+        <link rel="canonical" href="https://jackohughes.com/publications.html">
+        
+        <!-- Stylesheets and Scripts -->
         <link rel="stylesheet" href="./style.css">
         <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
         <script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="./script.js"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        
+        <!-- Structured Data for Publications -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Publications - Jack Hughes",
+          "description": "Academic publications by Jack Hughes on programming language theory and type systems",
+          "author": {
+            "@type": "Person",
+            "name": "Jack Hughes",
+            "affiliation": "University of Kent"
+          },
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "ScholarlyArticle",
+                "name": "Spegion: Implicit and Non-Lexical Regions with Sized Allocations",
+                "author": ["Jack Hughes", "Michael Vollmer", "Mark Batty"],
+                "datePublished": "2025",
+                "isPartOf": {
+                  "@type": "PublicationEvent",
+                  "name": "European Conference on Object-Oriented Programming (ECOOP 25)"
+                }
+              },
+              {
+                "@type": "Thesis",
+                "name": "Program Synthesis from Linear and Graded Types",
+                "author": "Jack Hughes",
+                "datePublished": "2024",
+                "inSupportOf": "PhD",
+                "provider": "University of Kent"
+              },
+              {
+                "@type": "ScholarlyArticle", 
+                "name": "Program Synthesis from Graded Types",
+                "author": ["Jack Hughes", "Dominic Orchard"],
+                "datePublished": "2024",
+                "isPartOf": {
+                  "@type": "PublicationEvent",
+                  "name": "European Symposium on Programming (ESOP 2024)"
+                }
+              },
+              {
+                "@type": "ScholarlyArticle",
+                "name": "Deriving Distributive Laws for Graded Linear Types",
+                "author": ["Jack Hughes", "Michael Vollmer", "Dominic Orchard"],
+                "datePublished": "2020",
+                "isPartOf": {
+                  "@type": "PublicationEvent",
+                  "name": "Workshop on Linearity & Trends in Linear Logic and Applications"
+                }
+              },
+              {
+                "@type": "ScholarlyArticle",
+                "name": "Linear Exponentials as Graded Modal Types",
+                "author": ["Jack Hughes", "Daniel Marshall", "James Wood", "Dominic Orchard"],
+                "datePublished": "2021",
+                "isPartOf": {
+                  "@type": "PublicationEvent",
+                  "name": "Workshop on Trends in Linear Logic and Applications (TLLA 2021)"
+                }
+              },
+              {
+                "@type": "ScholarlyArticle",
+                "name": "Resourceful Program Synthesis from Graded Linear Types",
+                "author": ["Jack Hughes", "Dominic Orchard"],
+                "datePublished": "2020",
+                "isPartOf": {
+                  "@type": "PublicationEvent",
+                  "name": "Logic-Based Program Synthesis and Transformation (LOPSTR 2020)"
+                },
+                "award": "Best Paper Award"
+              }
+            ]
+          }
+        }
+        </script>
+        
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74595802-1"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'UA-74595802-1');
+          gtag('config', 'UA-74595802-1', {
+            'anonymize_ip': true,
+            'cookie_flags': 'SameSite=None;Secure'
+          });
         </script>
 </head>
 <body>

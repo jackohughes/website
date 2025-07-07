@@ -86,16 +86,70 @@ a:hover {
 #cursor {
   width: 300px;
   height: 300px;
-  filter: blur(100px);
+  filter: blur(80px);
   position: absolute;
   border-radius: 30%;
   z-index: 40;
   mix-blend-mode: screen;
   pointer-events: none;
+  /* Subtle flowing animation */
+  animation: gradientFlow 8s ease-in-out infinite alternate,
+             subtleRotate 15s linear infinite;
+  transition: left 0.1s ease-out, top 0.1s ease-out;
 }
 
 .gradient {
-  background: linear-gradient(to bottom right, rgb(121, 64, 83) 30%, rgb(202, 165, 191) 60%, rgba(98, 206, 154, 0.23) 80%) no-repeat;
+  background: linear-gradient(45deg, 
+    rgba(121, 64, 83, 0.8) 0%, 
+    rgba(202, 165, 191, 0.7) 30%, 
+    rgba(98, 206, 154, 0.6) 60%,
+    rgba(6, 174, 213, 0.5) 80%,
+    rgba(121, 64, 83, 0.8) 100%) no-repeat;
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease-in-out infinite;
+}
+
+/* Keyframe animations for subtle movement */
+@keyframes gradientFlow {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: blur(80px) hue-rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    filter: blur(100px) hue-rotate(15deg);
+  }
+  100% {
+    transform: scale(0.9) rotate(360deg);
+    filter: blur(60px) hue-rotate(0deg);
+  }
+}
+
+@keyframes subtleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 ::selection {
@@ -112,4 +166,110 @@ a:hover {
   #cursor {
     display: none;
   }
+}
+
+/* Tutoring Page Styles */
+.tutoring-area {
+  margin-bottom: 2rem;
+}
+
+.tutoring-area h3 {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.tutoring-area p {
+  margin-bottom: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+#tutoring h1 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+#tutoring h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#tutoring h2:first-of-type {
+  margin-top: 2rem;
+}
+
+#tutoring h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+#tutoring section {
+  max-width: 33rem;
+}
+
+#tutoring > section > p:first-child {
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+/* Indent the areas of expertise only */
+#tutoring p:nth-child(2),
+#tutoring p:nth-child(3),
+#tutoring p:nth-child(4),
+#tutoring p:nth-child(5),
+#tutoring p:nth-child(6) {
+  margin-left: 1.5rem;
+}
+
+/* Prevent orphans */
+#tutoring p {
+  orphans: 2;
+  widows: 2;
+  text-wrap: pretty;
+}
+
+/* Navigation improvements for all pages */
+#header {
+  background: white;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#logo a {
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+#logo a:hover {
+  color: rgb(6, 174, 213);
+}
+
+#navigation {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+#navigation a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+#navigation a:hover,
+#navigation a[aria-current="page"] {
+  background-color: rgba(6, 174, 213, 0.1);
+  color: rgb(6, 174, 213);
 }
